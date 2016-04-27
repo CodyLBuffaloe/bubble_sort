@@ -1,13 +1,24 @@
-def bubble_sort(array)
+def bubble_sort(unsorted_numbers)
 
-    while(array != array.sort)
+	is_sorted = false
+        while(is_sorted == false )
+        	is_sorted = true
+        unsorted_numbers.each_with_index do | num, index |
 
-        array.each_with_index do | num, index |
-            a = 
-            if()
+
+
+                if((index < (unsorted_numbers.length - 1)) && (num > unsorted_numbers[(index + 1)]))
+
+                    unsorted_numbers[index] = unsorted_numbers[(index + 1)]
+                    unsorted_numbers[(index + 1)] = num
+                    is_sorted = false
+
+                end
 
         end
-    end
+
+        end
+	return unsorted_numbers
 
 end
 
